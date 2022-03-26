@@ -8,12 +8,13 @@ const Navbar = () => {
       <nav className="navigation">
         <div className="flex-row-sb px-2 py-1">
           <Link to="/" className="logo">
-            <div className="avatar avatar-sm">
+            <div className="avatar avatar-sm flex-row-start">
               <img
                 src="https://millionairedating.onluxy.com/wp-content/uploads/2018/12/woman-smilling-in-red-top-and-red-lipstick-square-e1544061815643.jpg"
                 alt="avatar-img"
                 className="img-responsive img-circular"
               />
+              <small className="text-sm text-bold m-sm">Rachel Green</small>
             </div>
           </Link>
           <div className="flex-row-start nav-title">
@@ -39,7 +40,7 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <BsFillMoonFill />
+            <BsFillMoonFill size={22} />
           </div>
         </div>
       </nav>
