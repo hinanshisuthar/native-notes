@@ -1,0 +1,31 @@
+@import url(../index.css);
+
+.navigation {
+    background-color: var(--grey-100);
+    box-shadow: var(--box-shadow);
+}
+
+.search-field {
+    border: 1px solid var(--grey-400);
+    border-radius: var(--size-8);
+}
+
+.logo {
+    margin-right: 7rem;
+}
+
+.btn-primary {
+    background-color: var(--lime-600);
+    border: transparent;
+    text-transform: capitalize;
+    border-radius: var(--size-7);
+    padding: 9px 1rem;
+}
+
+.plus-icon {
+    margin-right: 8px;
+}
+
+.nav-title {
+    flex-grow: 1;
+}
