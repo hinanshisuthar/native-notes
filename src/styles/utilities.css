@@ -60,11 +60,11 @@
 }
 
 .label {
-    background-color: var(--orange-600);
+    background-color: var(--red-500);
 }
 
 .label-c {
-    color: var(--orange-600);
+    color: var(--red-500);
 }
 
 .archive {
@@ -84,7 +84,7 @@
 }
 
 .profile {
-    color: var(--pink-600);
+    color: var(--orange-600);
 }
 
 .grid-60-40 {
@@ -108,8 +108,26 @@ h1, h2, h3, h4, h5, h6 {
 
 input {
     width: max-content;
+    border: transparent;
+}
+
+input:focus-visible {
+    outline: transparent;
 }
 
 form {
     border: transparent;
+    width: max-content;
+}
+
+fieldset {
+    border-radius: var(--size-8);
+    border: 1px solid var(--grey-400);
+}
+
+.flex-row-start-wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
