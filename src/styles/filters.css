@@ -1,17 +1,3 @@
-fieldset {
-    border-radius: var(--size-8);
-    border: 1px solid var(--grey-400);
-}
-
-form {
-    width: max-content;
-}
-
-/* .form-group {
-    display: block;
-    margin-bottom: 15px;
-} */
-
 .form-group input {
   padding: 0;
   height: initial;
@@ -64,6 +50,5 @@ option {
 .select {
     background-color: transparent;
     border-radius: var(--size-3);
-    /* color: var(--lime-600); */
     padding: 3px;
 }
