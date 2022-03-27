@@ -18,28 +18,28 @@ const Filters = () => {
             </select>
           </label>
           <div className="ml-auto">
-            <div class="new">
+            <div className="new">
               <form className="flex-row-start">
                 <h5>Tags:</h5>
-                <div class="form-group mx-md my-sm">
+                <div className="form-group mx-md my-sm">
                   <input type="checkbox" id="work" />
-                  <label for="work">Work</label>
+                  <label htmlFor="work">Work</label>
                 </div>
-                <div class="form-group mx-md my-sm">
+                <div className="form-group mx-md my-sm">
                   <input type="checkbox" id="health" />
-                  <label for="health">Health</label>
+                  <label htmlFor="health">Health</label>
                 </div>
-                <div class="form-group mx-md my-sm">
+                <div className="form-group mx-md my-sm">
                   <input type="checkbox" id="creativity" />
-                  <label for="creativity">Creativity</label>
+                  <label htmlFor="creativity">Creativity</label>
                 </div>
-                <div class="form-group mx-md my-sm">
+                <div className="form-group mx-md my-sm">
                   <input type="checkbox" id="chores" />
-                  <label for="chores">Chores</label>
+                  <label htmlFor="chores">Chores</label>
                 </div>
-                <div class="form-group mx-md my-sm">
+                <div className="form-group mx-md my-sm">
                   <input type="checkbox" id="teams" />
-                  <label for="teams">Teams</label>
+                  <label htmlFor="teams">Teams</label>
                 </div>
               </form>
             </div>
