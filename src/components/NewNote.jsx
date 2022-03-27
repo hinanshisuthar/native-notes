@@ -1,6 +1,5 @@
-import { BsPin, BsPalette, BsTrash } from "react-icons/bs";
+import { BsPin, BsPalette, BsTrash, MdLabelOutline, MdOutlineArchive } from "./icons";
 import "../styles/new-note.css";
-import { MdLabelOutline, MdOutlineArchive } from "react-icons/md";
 
 const NewNote = () => {
   return (
