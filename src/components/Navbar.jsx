@@ -1,4 +1,4 @@
-import { BsSearch, BsPlusLg, BsFillMoonFill } from "react-icons/bs";
+import {BsSearch, BsPlusLg, BsFillMoonFill} from './icons'
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
