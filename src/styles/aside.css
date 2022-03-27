@@ -22,3 +22,7 @@
 .aside .flex-row-start:hover {
     background-color: var(--grey-100);
 }
+
+.router-link {
+    border-radius: var(--size-6);
+}
