@@ -1,7 +1,6 @@
 import { Aside } from "../components/Aside";
-import { Filters } from "../components/Filters";
 import { Navbar } from "../components/Navbar";
-import { NewNote } from "../components/NewNote";
+import { HomeDisplay } from "./HomeDisplay";
 
 const HomePage = () => {
   return (
@@ -9,10 +8,7 @@ const HomePage = () => {
       <Navbar />
       <div className="grid grid-20-80">
         <Aside />
-        <div>
-          <Filters />
-          <NewNote />
-        </div>
+        <HomeDisplay />
       </div>
     </>
   );
