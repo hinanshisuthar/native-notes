@@ -46,6 +46,16 @@
     color: var(--font-grey);
 }
 
+.btn-secondary {
+    color: var(--lime-600);
+    border: 1px solid var(--lime-600);
+    text-transform: capitalize;
+    border-radius: var(--size-7);
+    padding: 7px 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
 .btn-primary:hover {
     background-color: var(--lime-700);
     color: var(--font-grey);
