@@ -1,17 +1,10 @@
-.note {
-    width: 28rem;
-    background-color: var(--blue-300);
-    border-radius: var(--size-9);
+@import url(../../src/index.css);
+
+.editor-con {
+    width: 100%;
+    flex-direction: column;
 }
 
-.note-label {
-    background-color: var(--red-500);
-    padding: 6px 8px;
-    border-radius: var(--size-8);
-    text-transform: uppercase;
-    color: var(--font-grey);
-}
-
-.icon {
-    margin-right: 1rem;
+.quill.editor {
+    border-radius: var(--size-10);
 }
