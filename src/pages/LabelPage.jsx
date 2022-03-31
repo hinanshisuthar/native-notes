@@ -1,6 +1,6 @@
 import { Navbar } from "../components/Navbar";
 import { Aside } from "../components/Aside";
-import { NewNote } from "../components/NewNote";
+import { NoteCard } from "../components/NoteCard";
 import "../styles/labels.css";
 import { Chips } from "../components/Chips";
 
@@ -18,7 +18,7 @@ const LabelPage = () => {
             </fieldset>
           </div>
           <div>
-              <NewNote />
+              <NoteCard />
           </div>
         </div>
       </div>

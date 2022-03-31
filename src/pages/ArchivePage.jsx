@@ -1,6 +1,6 @@
 import { Aside } from "../components/Aside";
 import { Navbar } from "../components/Navbar";
-import { NewNote } from "../components/NewNote";
+import { NoteCard } from "../components/NoteCard";
 import { BsTrash } from "../components/icons";
 
 const ArchivePage = () => {
@@ -15,7 +15,7 @@ const ArchivePage = () => {
             <BsTrash size={20} />
           </div>
           <div>
-            <NewNote />
+            <NoteCard />
           </div>
         </section>
       </div>
