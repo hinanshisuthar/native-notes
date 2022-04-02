@@ -1,0 +1,54 @@
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--lime-600);
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 6px;
+  height: 14px;
+  border: solid var(--lime-600);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+option {
+    color: var(--lime-600);
+    font-weight: bold;
+}
+
+.dropdown-con {
+    flex-grow: 1;
+}
+
+.select {
+    background-color: transparent;
+    border-radius: var(--size-3);
+    padding: 3px;
+}

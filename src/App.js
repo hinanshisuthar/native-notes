@@ -1,12 +1,22 @@
 import "./App.css";
-import { Navbar } from "./components/Navbar";
 import {Routes, Route} from 'react-router-dom'
+import { HomePage } from "./pages/HomePage";
+import { LandingPage } from "./pages/LandingPage";
+import { LabelPage } from "./pages/LabelPage";
+import { ArchivePage } from "./pages/ArchivePage";
+import { TrashPage } from "./pages/TrashPage";
+import { ProfilePage } from "./pages/ProfilePage";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Navbar />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/labels" element={<LabelPage />} />
+        <Route path="/archived" element={<ArchivePage />} />
+        <Route path="/trashed" element={<TrashPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </div>
   );

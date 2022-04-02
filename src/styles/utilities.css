@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 :root {
-    --grey-100: #f1f1f1;
+    --grey-100: #f3e5ed;
     --grey-200: #e2e8f0;
     --grey-400: #a3a3a3;
     --grey-800: #27272a;
@@ -15,16 +17,127 @@
     --orange-600: #ea580c;
     --yellow-300: #fde047;
     --yellow-500: #eab308;
+    --lime-100: #f9fdef;
+    --lime-200: #e7e7e7;
     --lime-300: #bef264;
     --lime-600: #65a30d;
+    --lime-700: #4d7c0f;
     --green-300: #86efac;
     --green-600: #16a34a;
     --blue-600: #0891b2;
     --font-grey: #f9fafb;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .flex-row-start {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.btn-primary {
+    background-color: var(--lime-600);
+    border: transparent;
+    text-transform: capitalize;
+    border-radius: var(--size-7);
+    padding: 7px 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-grey);
+}
+
+.btn-secondary {
+    color: var(--lime-600);
+    border: 1px solid var(--lime-600);
+    text-transform: capitalize;
+    border-radius: var(--size-7);
+    padding: 7px 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: var(--lime-700);
+    color: var(--font-grey);
+}
+
+.home {
+    background-color: var(--blue-600);
+}
+
+.home-c {
+    color: var(--blue-600);
+}
+
+.label {
+    background-color: var(--red-500);
+}
+
+.label-c {
+    color: var(--red-500);
+}
+
+.archive {
+    background-color: var(--purple-600);
+}
+
+.archive-c {
+    color: var(--purple-600);
+}
+
+.trash {
+    background-color: var(--yellow-500);
+}
+
+.trash-c {
+    color: var(--yellow-500);
+}
+
+.profile {
+    color: var(--orange-600);
+}
+
+.grid-60-40 {
+    grid-template-columns: 60% 1fr;
+}
+
+.highlight {
+    color: var(--lime-600);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.flex-col-sa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    width: max-content;
+    border: transparent;
+}
+
+input:focus-visible {
+    outline: transparent;
+}
+
+form {
+    border: transparent;
+    width: max-content;
+}
+
+fieldset {
+    border-radius: var(--size-8);
+    border: 1px solid var(--grey-400);
+}
+
+.flex-row-start-wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }

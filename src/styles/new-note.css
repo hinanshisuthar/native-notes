@@ -1,0 +1,10 @@
+@import url(../../src/index.css);
+
+.editor-con {
+    width: 100%;
+    flex-direction: column;
+}
+
+.quill.editor {
+    border-radius: var(--size-10);
+}

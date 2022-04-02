@@ -1,0 +1,14 @@
+@import url(../index.css);
+
+.page-wrapper {
+    height: 100vh;
+    background-color: var(--lime-100);
+}
+
+.page-image {
+    width: 60%;
+}
+
+.page-content {
+    width: 60%;
+}
