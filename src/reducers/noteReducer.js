@@ -1,7 +1,7 @@
 const noteReducer = (noteState, { type, payload }) => {
   switch (type) {
     case "ADD_NOTES":
-      return { ...noteState, notes: [...noteState.notes, { ...payload }] };
+      return { ...noteState, notes: payload };
     case "EDIT_NOTES":
       return {
         ...noteState,
