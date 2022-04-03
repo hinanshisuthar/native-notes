@@ -8,4 +8,4 @@ function MockAPI() {
   );
 }
 
-export default MockAPI;
+export {MockAPI};
