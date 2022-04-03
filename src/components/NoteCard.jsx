@@ -10,18 +10,17 @@ import parse from "react-html-parser";
 import { useNotes } from "../context/notes-context";
 
 const NoteCard = ({ notes }) => {
-  const { setInput, setShowEditor, setNoteButton } = useNotes();
+  const { setInput } = useNotes();
 
   const editNote = () => {
     setInput(notes);
-    setNoteButton("Save");
   };
 
   return (
     <div className="note px-2 py-1 mx-2 my-1" key={notes.id} id={notes.id}>
       <div className="note-header flex-row-start p-sm">
         <BsPin size={21} className="icon" />
-        <small className="note-label ml-auto text-bold">{notes.tag}</small>
+        <small className="note-label ml-auto text-bold">{notes.tags}</small>
       </div>
       <div
         className="p-sm"
