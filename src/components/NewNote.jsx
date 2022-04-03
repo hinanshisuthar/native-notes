@@ -9,8 +9,7 @@ const NewNote = () => {
     setInput,
     noteHandler,
     noteButton,
-    noteState,
-    editNoteHandler,
+    noteAlreadyExists,
   } = useNotes();
   const inputContent = input.content;
 
@@ -28,7 +27,7 @@ const NewNote = () => {
         className="editor"
       />
       <button className="btn btn-secondary m-md" onClick={noteHandler}>
-        {noteButton}
+        {noteAlreadyExists ? "Save" : "Add"}
       </button>
     </div>
   );
