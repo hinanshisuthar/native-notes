@@ -1,30 +1,30 @@
-import { createContext, useContext, useReducer, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useReducer,
+  useState,
+  useEffect,
+} from "react";
 import { noteReducer } from "../reducers/noteReducer";
-import { v4 as uuidv4 } from "uuid";
 import { addNoteOperation } from "../operations/noteOperations/addNoteOperation";
 import { encodedToken } from "../utils/token";
 import { editNoteOperation } from "../operations/noteOperations/editNoteOperation";
-import { useEffect } from "react";
-import { getNoteOperation } from "../operations/noteOperations/getNoteOperation";
 
 const NoteContext = createContext();
 
-const initalState = {
-  _id: '',
+const formInputs = {
   content: "",
-  backgroundColor: "red",
-  tag: [],
+  tags: [],
 };
 
 const NoteProvider = ({ children }) => {
-  const [input, setInput] = useState(initalState);
+  const [input, setInput] = useState(formInputs);
   const [noteState, noteDispatch] = useReducer(noteReducer, {
     notes: [],
   });
   const noteAlreadyExists = noteState.notes?.find(
     (note) => note._id === input._id
   );
-    // console.log(noteAlreadyExists);
 
   const noteHandler = async () => {
     if (noteAlreadyExists) {
@@ -32,9 +32,9 @@ const NoteProvider = ({ children }) => {
         const { data, status } = await editNoteOperation(
           {
             ...noteAlreadyExists,
-            title: input.content.trim(),
+            content: input.content,
             creationTime: new Date().toLocaleString(),
-            tags: "tag name updated",
+            tags: "tag updated",
           },
           encodedToken
         );
@@ -66,7 +66,7 @@ const NoteProvider = ({ children }) => {
         console.error(err);
       }
     }
-    setInput(initalState);
+    setInput(formInputs);
   };
 
   return (
