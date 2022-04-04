@@ -6,7 +6,6 @@ import {
   MdOutlineArchive,
 } from "./icons";
 import "../styles/note-card.css";
-import parse from "react-html-parser";
 import { useNotes } from "../context/notes-context";
 
 const NoteCard = ({ notes }) => {
@@ -17,7 +16,7 @@ const NoteCard = ({ notes }) => {
   };
 
   return (
-    <div className="note px-2 py-1 mx-2 my-1" key={notes.id} id={notes.id}>
+    <div className="note px-2 py-1 mx-2 my-1" key={notes._id}>
       <div className="note-header flex-row-start p-sm">
         <BsPin size={21} className="icon" />
         <small className="note-label ml-auto text-bold">{notes.tags}</small>
@@ -27,7 +26,7 @@ const NoteCard = ({ notes }) => {
         style={{ cursor: "pointer" }}
         onClick={() => editNote()}
       >
-        {parse(notes.content)}
+        {notes.content}
       </div>
 
       <div className="flex-row-sb p-sm">
@@ -39,8 +38,6 @@ const NoteCard = ({ notes }) => {
           <BsTrash size={22} className="icon" />
         </div>
       </div>
-      <div className="note-"></div>
-      <div className="note-"></div>
     </div>
   );
 };
