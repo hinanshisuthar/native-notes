@@ -7,14 +7,25 @@ const NewNote = () => {
   return (
     <div className="editor-con center" id={input._id}>
       <textarea
+        className="note-editor text-bold"
         type="text"
-        placeholder="Take a note..."
+        placeholder="Start writing..."
         value={input.content}
         onChange={(e) => setInput({ ...input, content: e.target.value })}
       />
-      <button className="btn btn-secondary m-md" onClick={noteHandler}>
-        {noteAlreadyExists ? "Save" : "Add"}
-      </button>
+      {input.content === "" ? (
+        <button
+          className="btn btn-secondary m-md"
+          onClick={noteHandler}
+          disabled
+        >
+          {noteAlreadyExists ? "Save" : "Add"}
+        </button>
+      ) : (
+        <button className="btn btn-secondary m-md" onClick={noteHandler}>
+          {noteAlreadyExists ? "Save" : "Add"}
+        </button>
+      )}
     </div>
   );
 };
