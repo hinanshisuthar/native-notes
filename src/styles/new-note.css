@@ -1,17 +1,39 @@
 @import url(../../src/index.css);
 
 .editor-con {
-    width: 100%;
     flex-direction: column;
 }
 
 .note-editor {
     border-radius: var(--size-5);
-    width: 50%;
+    width: 100%;
     background-color: transparent;
     font-family: 'Poppins', sans-serif;;
 }
 
+textarea {
+    outline: transparent;
+    border: transparent;
+    overflow-y: hidden;
+}
+
 textarea:focus, input:focus {
-    outline: 1px solid var(--blue-600);
+    outline: transparent;
+}
+
+.note-input-con {
+    background-color: #ecfccb;
+    width: 70%;  
+    border: 1px solid var(--lime-700);
+    border-radius: var(--size-6);
+    align-items: flex-start;
+    height: 15rem;
+}
+
+.input-tags {
+    width: max-content;
+}
+
+.note-input-con h5 {
+    color: var(--lime-700);
 }
