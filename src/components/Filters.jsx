@@ -1,4 +1,5 @@
 import "../styles/filters.css";
+import { DowndownMenu } from "./DropdownMenu";
 
 const Filters = () => {
   return (
@@ -10,12 +11,7 @@ const Filters = () => {
         <div className="flex-row-sb">
           <label htmlFor="tags" className="mr-2 dropdown-con flex-row-start">
             <h5 className="mr-1">Sort By:</h5>
-            <select name="tags" id="tags" className="select mx-sm text-bold">
-              <option value="priority">priority</option>
-              <option value="assigned">assigned</option>
-              <option value="flagged">flagged</option>
-              <option value="due date">due date</option>
-            </select>
+            <DowndownMenu />
           </label>
           <div className="ml-auto">
             <div className="new">
