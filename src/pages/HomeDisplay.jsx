@@ -1,28 +1,18 @@
-import {Filters} from '../components/Filters';
-import { NewNote } from '../components/NewNote';
-import { useNotes } from '../context/notes-context';
-import {NoteCard} from '../components/NoteCard'
+import { Filters, NewNote } from "../components";
+import { NoteList } from "../components/NoteList";
+import { useNotes } from "../context/notes-context";
 
 const HomeDisplay = () => {
-  const {noteState} = useNotes();
+  const {
+    noteState: { notes },
+  } = useNotes();
+  return (
+    <div>
+      <Filters />
+      <NewNote />
+      <NoteList notes={notes} />
+    </div>
+  );
+};
 
-    return (
-        <div>
-          <Filters />
-            <NewNote />
-            {(noteState.notes.length === 0 ) ? (
-                <div className="center">
-                    <h3 className="m-md">No notes to display</h3>
-                </div>
-            ) : <div className="flex-row-start-wrap">{(noteState.notes.map((notes) => {
-              return <
-                NoteCard notes={notes} id={notes._id}/>
-          }))}</div>
-
-            
-            }
-        </div>
-    )
-}
-
-export {HomeDisplay};
+export { HomeDisplay };

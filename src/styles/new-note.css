@@ -5,6 +5,13 @@
     flex-direction: column;
 }
 
-.quill.editor {
-    border-radius: var(--size-10);
+.note-editor {
+    border-radius: var(--size-5);
+    width: 50%;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;;
+}
+
+textarea:focus, input:focus {
+    outline: 1px solid var(--blue-600);
 }
