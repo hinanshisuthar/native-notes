@@ -1,9 +1,14 @@
 import { Aside } from "../components/Aside";
 import { Navbar } from "../components/Navbar";
-import { NoteCard } from "../components/NoteCard";
+import { NoteList } from "../components/NoteList";
 import { BsTrash } from "../components/icons";
+import { useNotes } from "../context/notes-context";
 
 const TrashPage = () => {
+  const {
+    noteState: { trash },
+  } = useNotes();
+
   return (
     <>
       <Navbar />
@@ -15,7 +20,7 @@ const TrashPage = () => {
             <BsTrash size={20} />
           </div>
           <div>
-            <NoteCard />
+            <NoteList notes={trash} />
           </div>
         </section>
       </div>
