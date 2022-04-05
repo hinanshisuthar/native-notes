@@ -1,0 +1,3 @@
+const encodedToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJhY2E1MWIxYS1kZWQ3LTQzZTAtYjhhNC0wZGFhNTM1MzVhZTAiLCJlbWFpbCI6ImFkYXJzaGJhbGlrYUBnbWFpbC5jb20ifQ.xR4M3mWsGOOUCAAfVEtCdgegt-O4aLjT36AA1EmQrUM";
+
+export {encodedToken};
