@@ -7,12 +7,29 @@ import {
 } from "./icons";
 import "../styles/note-card.css";
 import { useNotes } from "../context/notes-context";
+import { moveToTrash } from "../operations/noteOperations/deleteNoteOperation";
+import { encodedToken } from "../utils/token";
 
 const NoteCard = ({ notes }) => {
-  const { setInput } = useNotes();
+  const { setInput, noteDispatch } = useNotes();
 
   const editNote = () => {
     setInput(notes);
+  };
+
+  const trashNote = async (notes) => {
+    try {
+      const { data, status } = await moveToTrash(notes, encodedToken);
+
+      if (status === 200) {
+        noteDispatch({
+          type: "TRASH_NOTE",
+          payload: { notes: data.notes, trash: notes },
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -35,7 +52,11 @@ const NoteCard = ({ notes }) => {
           <BsPalette size={22} className="icon" />
           <MdLabelOutline size={22} className="icon" />
           <MdOutlineArchive size={22} className="icon" />
-          <BsTrash size={22} className="icon" />
+          <BsTrash
+            size={22}
+            className="icon"
+            onClick={() => trashNote(notes)}
+          />
         </div>
       </div>
     </div>
