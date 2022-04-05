@@ -1,15 +1,8 @@
-import {
-  createContext,
-  useContext,
-  useReducer,
-  useState,
-  useEffect,
-} from "react";
+import { createContext, useContext, useReducer, useState } from "react";
 import { noteReducer } from "../reducers/noteReducer";
 import { addNoteOperation } from "../operations/noteOperations/addNoteOperation";
 import { encodedToken } from "../utils/token";
 import { editNoteOperation } from "../operations/noteOperations/editNoteOperation";
-import { moveToTrash } from "../operations/noteOperations/deleteNoteOperation";
 
 const NoteContext = createContext();
 
@@ -20,10 +13,13 @@ const formInputs = {
 
 const NoteProvider = ({ children }) => {
   const [input, setInput] = useState(formInputs);
+  const [tags, setTags] = useState(["work", "health", "chores"]);
+
   const [noteState, noteDispatch] = useReducer(noteReducer, {
     notes: [],
     trash: [],
   });
+
   const noteAlreadyExists = noteState.notes?.find(
     (note) => note._id === input._id
   );
@@ -36,7 +32,7 @@ const NoteProvider = ({ children }) => {
             ...noteAlreadyExists,
             content: input.content,
             creationTime: new Date().toLocaleString(),
-            tags: "tag updated",
+            tags: input.tags,
           },
           encodedToken
         );
@@ -56,7 +52,7 @@ const NoteProvider = ({ children }) => {
           {
             ...input,
             creationTime: new Date().toLocaleString(),
-            tags: "tag 1",
+            tags: input.tags,
           },
           encodedToken
         );
@@ -80,6 +76,9 @@ const NoteProvider = ({ children }) => {
         setInput,
         noteHandler,
         noteAlreadyExists,
+        formInputs,
+        tags,
+        setTags,
       }}
     >
       {children}
