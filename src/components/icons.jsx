@@ -9,7 +9,12 @@ import {
   BsPin,
   BsPalette,
 } from "react-icons/bs";
-import { MdLabelOutline, MdCancel, MdOutlineArchive } from "react-icons/md";
+import {
+  MdLabelOutline,
+  MdCancel,
+  MdOutlineArchive,
+  MdOutlineUnarchive,
+} from "react-icons/md";
 import { BiUserCircle } from "react-icons/bi";
 
 export {
@@ -26,4 +31,5 @@ export {
   BsPin,
   BsPalette,
   MdOutlineArchive,
+  MdOutlineUnarchive,
 };
