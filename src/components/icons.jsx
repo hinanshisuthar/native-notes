@@ -8,6 +8,7 @@ import {
   BsFillMoonFill,
   BsPin,
   BsPalette,
+  BsFilterCircle,
 } from "react-icons/bs";
 import {
   MdLabelOutline,
@@ -32,4 +33,5 @@ export {
   BsPalette,
   MdOutlineArchive,
   MdOutlineUnarchive,
+  BsFilterCircle,
 };
