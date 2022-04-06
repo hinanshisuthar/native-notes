@@ -13,7 +13,7 @@ const formInputs = {
 
 const NoteProvider = ({ children }) => {
   const [input, setInput] = useState(formInputs);
-  const [tags, setTags] = useState(["work", "health", "chores"]);
+  const [tags, setTags] = useState(["","work", "health", "chores"]);
 
   const [noteState, noteDispatch] = useReducer(noteReducer, {
     notes: [],
