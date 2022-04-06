@@ -44,11 +44,17 @@ option {
 }
 
 .dropdown-con {
-    flex-grow: 1;
+    width: max-content;
+    margin-right: 0;
 }
 
 .select {
     background-color: transparent;
     border-radius: var(--size-3);
     padding: 3px;
+}
+
+.filters-btn {
+  padding: 7px 2rem;
+  border-radius: var(--size-6) var(--size-6) 0 0;
 }
