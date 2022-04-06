@@ -4,7 +4,7 @@ import { NoteCard } from "./NoteCard";
 const NoteList = ({ notes }) => {
   const { noteState } = useNotes();
   return (
-    <div>
+    <div className="pl-md">
       {notes?.length === 0 ? (
         <div className="center">
           <h3 className="m-md">No notes to display</h3>
