@@ -14,6 +14,7 @@ const formInputs = {
 const NoteProvider = ({ children }) => {
   const [input, setInput] = useState(formInputs);
   const [tags, setTags] = useState(["","work", "health", "chores"]);
+  const [search, setSearch] = useState('')
 
   const [noteState, noteDispatch] = useReducer(noteReducer, {
     notes: [],
@@ -80,6 +81,8 @@ const NoteProvider = ({ children }) => {
         formInputs,
         tags,
         setTags,
+        search,
+        setSearch,
       }}
     >
       {children}
