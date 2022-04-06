@@ -1,9 +1,14 @@
 import { Aside } from "../components/Aside";
 import { Navbar } from "../components/Navbar";
-import { NoteCard } from "../components/NoteCard";
 import { BsTrash } from "../components/icons";
+import { useNotes } from "../context/notes-context";
+import { NoteList } from "../components/NoteList";
 
 const ArchivePage = () => {
+  const {
+    noteState: { archives },
+  } = useNotes();
+
   return (
     <>
       <Navbar />
@@ -15,7 +20,7 @@ const ArchivePage = () => {
             <BsTrash size={20} />
           </div>
           <div>
-            <NoteCard />
+            <NoteList notes={archives} />
           </div>
         </section>
       </div>
