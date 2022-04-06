@@ -10,12 +10,12 @@ const noteReducer = (noteState, { type, payload }) => {
       };
     case "ADD_TO_ARCHIVE":
       return { ...noteState, notes: payload.notes, archives: payload.archives };
-    case 'DELETE_FROM_ARCHIVE':
+    case "DELETE_FROM_ARCHIVE":
       return {
         ...noteState,
         archives: payload.archives,
-        trash: [...noteState.trash, { ...payload.trash }], 
-      }
+        trash: [...noteState.trash, { ...payload.trash }],
+      };
     default:
       return noteState;
   }
