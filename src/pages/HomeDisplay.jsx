@@ -1,4 +1,4 @@
-import { Filters, NewNote } from "../components";
+import { NewNote } from "../components";
 import { NoteList } from "../components/NoteList";
 import { useNotes } from "../context/notes-context";
 
@@ -7,8 +7,7 @@ const HomeDisplay = () => {
     noteState: { notes },
   } = useNotes();
   return (
-    <div>
-      <Filters />
+    <div className="p-2">
       <NewNote />
       <NoteList notes={notes} />
     </div>
