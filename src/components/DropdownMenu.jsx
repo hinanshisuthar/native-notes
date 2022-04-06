@@ -20,11 +20,12 @@ const DowndownMenuTags = () => {
       name="tags"
       id="tags"
       className="select mx-sm text-bold"
+      multiple={false}
       value={input.tags}
       onChange={(e) => setInput({ ...input, tags: [e.target.value] })}
     >
       {tags?.map((tag) => (
-        <option value={tag}>{tag}</option>
+        <option value={tag} key={tag}>{tag}</option>
       ))}
     </select>
   );
