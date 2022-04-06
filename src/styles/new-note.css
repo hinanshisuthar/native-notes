@@ -23,11 +23,11 @@ textarea:focus, input:focus {
 
 .note-input-con {
     background-color: #ecfccb;
-    width: 70%;  
+    width: 50%;  
     border: 1px solid var(--lime-700);
     border-radius: var(--size-6);
     align-items: flex-start;
-    height: 15rem;
+    height: 13rem;
 }
 
 .input-tags {
