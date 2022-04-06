@@ -1,8 +1,12 @@
 import {BsSearch, BsPlusLg, BsFillMoonFill} from './icons'
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
+import { useNotes } from '../context/notes-context';
+import { useEffect } from 'react';
 
 const Navbar = () => {
+  const {search, setSearch, noteDispatch} = useNotes();
+
   return (
     <>
       <nav className="navigation">
@@ -24,9 +28,11 @@ const Navbar = () => {
             <div htmlFor="search-field" className="flex-row-sb mx-2 search-field">
               <input
                 type="text"
-                className="text-sm p-sm"
+                className="text-sm p-sm text-bold"
                 id="search-field"
-                placeholder="Search notes"
+                placeholder="Search notes by tags"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
               />
               <button type="submit" className="btn-icon pr-sm">
                 <BsSearch size={20} />
