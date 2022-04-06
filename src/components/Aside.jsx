@@ -1,5 +1,5 @@
 import "../styles/aside.css";
-import {BsPlusLg, BsHouse, BsArchive, BsTrash, MdLabelOutline, BiUserCircle} from './icons'
+import { BsHouse, BsArchive, BsTrash, MdLabelOutline, BiUserCircle} from './icons'
 
 import { Link } from "react-router-dom";
 
@@ -36,12 +36,6 @@ const Aside = () => {
           Profile
         </div>
       </Link>
-      <div className="p-sm m-md">
-        <button className="btn btn-primary flex-row-sb">
-          {" "}
-          <BsPlusLg className="plus-icon" /> Add New Note
-        </button>
-      </div>
     </div>
   );
 };
