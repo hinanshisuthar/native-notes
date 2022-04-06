@@ -18,6 +18,7 @@ const NoteProvider = ({ children }) => {
   const [noteState, noteDispatch] = useReducer(noteReducer, {
     notes: [],
     trash: [],
+    archives: [],
   });
 
   const noteAlreadyExists = noteState.notes?.find(
