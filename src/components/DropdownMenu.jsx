@@ -48,7 +48,7 @@ const DowndownMenu = () => {
             checked={urgent}
             onChange={() => noteDispatch({ type: "URGENT" })}
           />
-          1 Day
+          Urgent
         </label>
         <label>
           <input
@@ -59,7 +59,7 @@ const DowndownMenu = () => {
             checked={intermediate}
             onChange={() => noteDispatch({ type: "INTERMEDIATE" })}
           />
-          2-3 Days
+          Intermediate
         </label>
         <label>
           <input
@@ -70,7 +70,7 @@ const DowndownMenu = () => {
             checked={trivial}
             onChange={() => noteDispatch({ type: "TRIVIAL" })}
           />
-          A week
+          Trivial
         </label>
       </div>
     </div>
@@ -98,4 +98,26 @@ const DowndownMenuTags = () => {
   );
 };
 
-export { DowndownMenu, DowndownMenuTags };
+const DropdownMenuPriority = () => {
+  const { input, setInput, dueIn } = useNotes();
+
+
+  return (
+    <select
+      name="priority"
+      id="priority"
+      className="select mx-sm text-bold"
+      multiple={false}
+      value={input.dueIn}
+      onChange={(e) => setInput({ ...input, dueIn: [e.target.value] })}
+    >
+      {dueIn.map((item) => (
+        <option value={item} key={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+export { DowndownMenu, DowndownMenuTags, DropdownMenuPriority };
