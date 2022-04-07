@@ -1,6 +1,6 @@
 import { useNotes } from "../context/notes-context";
 import "../styles/new-note.css";
-import { DowndownMenuTags } from "./DropdownMenu";
+import { DowndownMenuTags, DropdownMenuPriority } from "./DropdownMenu";
 
 const NewNote = () => {
   const { input, setInput, noteHandler, noteAlreadyExists } = useNotes();
@@ -10,6 +10,8 @@ const NewNote = () => {
       <div className="note-input-con flex-col-sb p-1">
         <h5 className="m-sm">Tags</h5>
         <DowndownMenuTags />
+
+        <DropdownMenuPriority />
 
         <h5 className="m-sm">Note:</h5>
 
