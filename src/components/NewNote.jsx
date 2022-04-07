@@ -6,7 +6,7 @@ const NewNote = () => {
   const { input, setInput, noteHandler, noteAlreadyExists } = useNotes();
 
   return (
-    <div className="editor-con center" id={input._id}>
+    <div className="editor-con" id={input._id}>
       <div className="note-input-con flex-col-sb p-1">
         <h5 className="m-sm">Tags</h5>
         <DowndownMenuTags />

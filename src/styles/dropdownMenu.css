@@ -1,0 +1,15 @@
+@import url(../index.css);
+
+.input {
+    width: max-content;
+}
+
+.filters-menu {
+    z-index: var(--z-5);
+    position: absolute;
+    top: 4rem;
+    right: 14.6rem;
+    background-color: #ecfccb;
+    border: 1px solid var(--lime-700);
+    padding: 1.2rem 1.35rem;
+}

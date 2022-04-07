@@ -20,6 +20,8 @@ const NoteProvider = ({ children }) => {
     notes: [],
     trash: [],
     archives: [],
+    sortBy: '',
+    filterCategories: {urgent: false, intermediate: false, trivial: false}
   });
 
   const noteAlreadyExists = noteState.notes?.find(

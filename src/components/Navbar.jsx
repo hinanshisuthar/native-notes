@@ -1,11 +1,11 @@
-import {BsSearch, BsPlusLg, BsFillMoonFill} from './icons'
+import { BsSearch, BsPlusLg, BsFillMoonFill } from "./icons";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-import { useNotes } from '../context/notes-context';
-import { useEffect } from 'react';
+import { useNotes } from "../context/notes-context";
+import { Filters } from "./Filters";
 
 const Navbar = () => {
-  const {search, setSearch, noteDispatch} = useNotes();
+  const { search, setSearch } = useNotes();
 
   return (
     <>
@@ -25,7 +25,10 @@ const Navbar = () => {
             <div className="mx-2">
               <p className="text-md text-bold">All Notes</p>
             </div>
-            <div htmlFor="search-field" className="flex-row-sb mx-2 search-field">
+            <div
+              htmlFor="search-field"
+              className="flex-row-sb mx-2 search-field"
+            >
               <input
                 type="text"
                 className="text-sm p-sm text-bold"
@@ -44,6 +47,7 @@ const Navbar = () => {
                 <BsPlusLg className="plus-icon" /> Add New Note
               </button>
             </div>
+              <Filters />
           </div>
           <div>
             <BsFillMoonFill size={22} />

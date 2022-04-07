@@ -1,45 +1,27 @@
 import "../styles/filters.css";
 import { DowndownMenu } from "./DropdownMenu";
+import { useState } from "react";
+import { BsFilterCircle } from "../components/icons";
 
 const Filters = () => {
+  const [filtersMenu, setFiltersMenu] = useState(false);
+  const showFiltersMenu = () => {
+    setFiltersMenu(!filtersMenu);
+  };
+
   return (
-    <div className="wrapper px-md py-1">
-      <fieldset className="py-1 px-2 flex-row-start">
-        <legend>
-          <h4>Filters</h4>
-        </legend>
+    <div className="wrapper px-md">
+      <fieldset className="p-sm px-md flex-col-start">
+        <button
+          className="btn btn-primary flex-row-start filters-btn"
+          onClick={showFiltersMenu}
+        >
+          <BsFilterCircle size={20} className="icon ml-auto" /> Filters
+        </button>
         <div className="flex-row-sb">
-          <label htmlFor="tags" className="mr-2 dropdown-con flex-row-start">
-            <h5 className="mr-1">Sort By:</h5>
-            <DowndownMenu />
+          <label htmlFor="tags" className="mr-2 dropdown-con flex-col-start">
+            {filtersMenu ? <DowndownMenu /> : null}
           </label>
-          <div className="ml-auto">
-            <div className="new">
-              <form className="flex-row-start">
-                <h5>Tags:</h5>
-                <div className="form-group mx-md my-sm">
-                  <input type="checkbox" id="work" />
-                  <label htmlFor="work">Work</label>
-                </div>
-                <div className="form-group mx-md my-sm">
-                  <input type="checkbox" id="health" />
-                  <label htmlFor="health">Health</label>
-                </div>
-                <div className="form-group mx-md my-sm">
-                  <input type="checkbox" id="creativity" />
-                  <label htmlFor="creativity">Creativity</label>
-                </div>
-                <div className="form-group mx-md my-sm">
-                  <input type="checkbox" id="chores" />
-                  <label htmlFor="chores">Chores</label>
-                </div>
-                <div className="form-group mx-md my-sm">
-                  <input type="checkbox" id="teams" />
-                  <label htmlFor="teams">Teams</label>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </fieldset>
     </div>

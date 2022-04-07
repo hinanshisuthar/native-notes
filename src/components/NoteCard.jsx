@@ -109,8 +109,6 @@ const NoteCard = ({ notes }) => {
         <small className="text-bold">{notes.creationTime}</small>
         <div>
           <BsPalette size={22} className="icon" />
-          <MdLabelOutline size={22} className="icon" />
-
           {inArchivesAlready ? (
             <MdOutlineUnarchive
               size={22}

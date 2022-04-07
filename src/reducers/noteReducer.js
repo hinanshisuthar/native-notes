@@ -16,6 +16,34 @@ const noteReducer = (noteState, { type, payload }) => {
         archives: payload.archives,
         trash: [...noteState.trash, { ...payload.trash }],
       };
+    case "CREATION_TIME_NEWER":
+      return { ...noteState, sortBy: type };
+    case "CREATION_TIME_OLDER":
+      return { ...noteState, sortBy: type };
+    case "URGENT":
+      return {
+        ...noteState,
+        filterCategories: {
+          ...noteState["filterCategories"],
+          urgent: !noteState.filterCategories.urgent,
+        },
+      };
+    case "INTERMEDIATE":
+      return {
+        ...noteState,
+        filterCategories: {
+          ...noteState["filterCategories"],
+          intermediate: !noteState.filterCategories.intermediate,
+        },
+      };
+    case "TRIVIAL":
+      return {
+        ...noteState,
+        filterCategories: {
+          ...noteState["filterCategories"],
+          trivial: !noteState.filterCategories.trivial,
+        },
+      };
     default:
       return noteState;
   }

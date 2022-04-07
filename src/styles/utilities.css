@@ -133,7 +133,7 @@ form {
 
 fieldset {
     border-radius: var(--size-8);
-    border: 1px solid var(--grey-400);
+    border: transparent;
 }
 
 .flex-row-start-wrap{
@@ -141,4 +141,12 @@ fieldset {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.grid-30-70 {
+    grid-template-columns: 30% 1fr;
+}
+
+.icon {
+    cursor: pointer;
 }
