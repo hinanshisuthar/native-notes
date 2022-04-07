@@ -4,21 +4,21 @@ const categorizedNotes = (notes, urgent, intermediate, trivial) => {
     return notes;
   if (urgent) {
     let newNotesList = notes.filter(
-      (note) => "urgent" === note.dueIn.toLowerCase()
+      (note) => "urgent" === note.dueIn[0].toLowerCase()
     );
 
     list.push(...newNotesList);
   }
   if (intermediate) {
     let newNotesList = notes.filter(
-      (note) => "intermediate" === note.dueIn.toLowerCase()
+      (note) => "intermediate" === note.dueIn[0].toLowerCase()
     );
 
     list.push(...newNotesList);
   }
   if (trivial) {
     let newNotesList = notes.filter(
-      (note) => "trivial" === note.dueIn.toLowerCase()
+      (note) => "trivial" === note.dueIn[0].toLowerCase()
     );
 
     list.push(...newNotesList);
