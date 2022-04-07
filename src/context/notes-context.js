@@ -9,19 +9,22 @@ const NoteContext = createContext();
 const formInputs = {
   content: "",
   tags: [],
+  dueIn: [],
 };
 
 const NoteProvider = ({ children }) => {
   const [input, setInput] = useState(formInputs);
-  const [tags, setTags] = useState(["","work", "health", "chores"]);
-  const [search, setSearch] = useState('')
+  const [tags, setTags] = useState(["", "work", "health", "chores"]);
+  const [search, setSearch] = useState("");
+  const dueInOptions = ["", "urgent", "intermediate", "trivial"];
+  const [dueIn, setDueIn] = useState(dueInOptions);
 
   const [noteState, noteDispatch] = useReducer(noteReducer, {
     notes: [],
     trash: [],
     archives: [],
-    sortBy: '',
-    filterCategories: {urgent: false, intermediate: false, trivial: false}
+    sortBy: "",
+    filterCategories: { urgent: false, intermediate: false, trivial: false },
   });
 
   const noteAlreadyExists = noteState.notes?.find(
@@ -85,6 +88,8 @@ const NoteProvider = ({ children }) => {
         setTags,
         search,
         setSearch,
+        dueIn,
+        setDueIn,
       }}
     >
       {children}
