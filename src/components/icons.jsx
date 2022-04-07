@@ -16,7 +16,7 @@ import {
   MdOutlineArchive,
   MdOutlineUnarchive,
 } from "react-icons/md";
-import { BiUserCircle } from "react-icons/bi";
+import { BiUserCircle, BiMessageSquareEdit } from "react-icons/bi";
 
 export {
   BsPlusLg,
@@ -34,4 +34,5 @@ export {
   MdOutlineArchive,
   MdOutlineUnarchive,
   BsFilterCircle,
+  BiMessageSquareEdit,
 };

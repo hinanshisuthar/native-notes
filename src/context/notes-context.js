@@ -9,6 +9,7 @@ const NoteContext = createContext();
 const formInputs = {
   content: "",
   tags: [],
+  bgColor: '',
 };
 
 const NoteProvider = ({ children }) => {
