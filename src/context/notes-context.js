@@ -1,4 +1,10 @@
-import { createContext, useContext, useReducer, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useReducer,
+  useState,
+  useEffect,
+} from "react";
 import { noteReducer } from "../reducers/noteReducer";
 import { addNoteOperation } from "../operations/noteOperations/addNoteOperation";
 import { encodedToken } from "../utils/token";
@@ -9,21 +15,27 @@ const NoteContext = createContext();
 const formInputs = {
   content: "",
   tags: [],
-  bgColor: '',
+  bgColor: "",
 };
 
 const NoteProvider = ({ children }) => {
   const [input, setInput] = useState(formInputs);
-  const [tags, setTags] = useState(["","work", "health", "chores"]);
-  const [search, setSearch] = useState('')
+  const [tags, setTags] = useState(["", "work", "health", "chores"]);
+  const [search, setSearch] = useState("");
+
+  const getNotesFromLocal = JSON.parse(localStorage.getItem("notes"));
 
   const [noteState, noteDispatch] = useReducer(noteReducer, {
-    notes: [],
+    notes: getNotesFromLocal,
     trash: [],
     archives: [],
-    sortBy: '',
-    filterCategories: {urgent: false, intermediate: false, trivial: false}
+    sortBy: "",
+    filterCategories: { urgent: false, intermediate: false, trivial: false },
   });
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(noteState.notes));
+  }, [noteState.notes]);
 
   const noteAlreadyExists = noteState.notes?.find(
     (note) => note._id === input._id
