@@ -1,7 +1,7 @@
 .note {
     width: 28rem;
-    background-color: var(--blue-300);
     border-radius: var(--size-9);
+    border: 1px solid var(--grey-800);
 }
 
 .note-label {

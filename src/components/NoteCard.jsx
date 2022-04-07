@@ -2,7 +2,7 @@ import {
   BsPin,
   BsPalette,
   BsTrash,
-  MdLabelOutline,
+  BiMessageSquareEdit,
   MdOutlineArchive,
   MdOutlineUnarchive,
 } from "./icons";
@@ -92,24 +92,27 @@ const NoteCard = ({ notes }) => {
   };
 
   return (
-    <div className="note px-2 py-1 mx-2 my-1" key={notes._id}>
+    <div
+      className="note px-2 py-1 mx-2 my-1"
+      key={notes._id}
+      style={{ backgroundColor: notes.bgColor }}
+    >
       <div className="note-header flex-row-start p-sm">
         <BsPin size={21} className="icon" />
         <small className="note-priority ml-auto text-bold">{notes.dueIn}</small>
         <small className="note-label ml-auto text-bold">{notes.tags}</small>
       </div>
-      <div
-        className="p-sm"
-        style={{ cursor: "pointer" }}
-        onClick={() => editNote()}
-      >
-        {notes.content}
-      </div>
+      <div className="p-sm">{notes.content}</div>
 
       <div className="flex-row-sb p-sm">
         <small className="text-bold">{notes.creationTime}</small>
         <div>
-          <BsPalette size={22} className="icon" />
+          <BiMessageSquareEdit
+            size={22}
+            className="icon"
+            style={{ cursor: "pointer" }}
+            onClick={() => editNote()}
+          />
           {inArchivesAlready ? (
             <MdOutlineUnarchive
               size={22}
@@ -127,7 +130,9 @@ const NoteCard = ({ notes }) => {
             size={22}
             className="icon"
             onClick={() =>
-              inArchivesAlready ? deleteFromArchiveFunc(notes) : trashNote(notes)
+              inArchivesAlready
+                ? deleteFromArchiveFunc(notes)
+                : trashNote(notes)
             }
           />
         </div>
