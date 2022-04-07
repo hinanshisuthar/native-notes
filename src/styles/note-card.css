@@ -12,6 +12,14 @@
     color: var(--font-grey);
 }
 
+.note-priority {
+    background-color: transparent;
+    padding: 6px 8px;
+    border: 1px solid var(--red-500);
+    border-radius: var(--size-8);
+    color: var(--red-500);
+}
+
 .icon {
     margin-right: 1rem;
 }
