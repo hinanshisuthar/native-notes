@@ -6,8 +6,11 @@ const NewNote = () => {
   const { input, setInput, noteHandler, noteAlreadyExists } = useNotes();
 
   return (
-    <div className="editor-con" id={input._id} >
-      <div className="note-input-con flex-col-sb p-1" style={{backgroundColor: input.bgColor}}>
+    <div className="editor-con" id={input._id}>
+      <div
+        className="note-input-con flex-col-sb p-1"
+        style={{ backgroundColor: input.bgColor }}
+      >
         <div className="flex-row-start">
           <span className="mx-sm flex-col-center">
             <h5 className="m-sm">Tags</h5>
@@ -28,9 +31,11 @@ const NewNote = () => {
               />
             </label>
           </span>
+          <span className="mx-sm">
+            <h5 className="m-sm">Due</h5>
+            <DropdownMenuPriority />
+          </span>
         </div>
-
-        <DropdownMenuPriority />
 
         <h5 className="m-sm">Note:</h5>
 
