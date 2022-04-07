@@ -29,7 +29,7 @@ const NoteProvider = ({ children }) => {
   const getNotesFromLocal = JSON.parse(localStorage.getItem("notes"));
 
   const [noteState, noteDispatch] = useReducer(noteReducer, {
-    notes: getNotesFromLocal,
+    notes: [] || getNotesFromLocal,
     trash: [],
     archives: [],
     sortBy: "",
