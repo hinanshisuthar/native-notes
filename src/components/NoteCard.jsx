@@ -95,6 +95,7 @@ const NoteCard = ({ notes }) => {
     <div className="note px-2 py-1 mx-2 my-1" key={notes._id}>
       <div className="note-header flex-row-start p-sm">
         <BsPin size={21} className="icon" />
+        <small className="note-priority ml-auto text-bold">{notes.dueIn}</small>
         <small className="note-label ml-auto text-bold">{notes.tags}</small>
       </div>
       <div
