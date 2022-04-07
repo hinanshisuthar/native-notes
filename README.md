@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/src/assets/hero-image.png" alt="native-notes-logo" width="250" height="250" />
+<img src="https://res.cloudinary.com/do5ez3xws/image/upload/v1648312954/notes_1_tgrb5s.svg" alt="native-notes-logo" width="250" height="250" />
   
 # Native-Notes
 
@@ -13,22 +13,18 @@
 
 </div>
 
----
 
 ### Checkout the live website here: [Native Notes](https://native-notes.netlify.app/)
 
----
 
 ## Why Native-Notes?
 Basically, Meet your modern note taking app.
 Manage your daily tasks and workflow in a modern way and boost your efficiency without any efforts.
 
 
----
 
 ## What features does it consists?
 
-Glad you asked.
 - Home(Landing Page) to get started.
 - Create a new note.
 - Edit an already existing note.
@@ -44,7 +40,5 @@ Glad you asked.
 - Filter according to due date
 - *Saving notes to local storage* WoHooo!
 
----
 ## Just go to the website and start taking your notes now
 
----
